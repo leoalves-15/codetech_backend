@@ -43,11 +43,3 @@ export const getItem = async (res: any, id: number) => {
         return res.status(400).json({menssage: "serve erro"});
     }
 }
-// Product.create({
-//     Title_Product: "Notebook VAIO® FE15 Intel® Core™ i7 Windows 11 Home 8GB 512GB SSD Full HD - Prata",
-//     Thumbnail_Product: "https://images-americanas.b2w.io/produtos/5267258975/imagens/notebook-vaio-fe15-intel-core-i5-linux-8gb-256gb-ssd-hd-prata/5267259038_1_large.jpg",
-//     Stock_Product: 5,
-//     Avaliation_Product:5,
-//     SalePrice_Product: 500.00,
-//     ListPrice_Product: 600.00
-// })
