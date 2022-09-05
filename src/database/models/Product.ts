@@ -64,6 +64,7 @@ export const getItemsSelected = async (res: any, id: string[]) => {
       let productA = await getItemRequest(res, parseInt(id[i]));
       products.push(productA);
     }
+      return res.status(200).json(products);
   } catch {
     return res.status(400).json({ menssage: "serve erro" });
   }
