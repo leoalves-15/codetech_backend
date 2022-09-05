@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(cors({
-    origin: ['http://127.0.0.1:5173']
+    origin: ['http://192.168.1.3:5173']
 }));
 
 app.use('/api', productRouter);

@@ -1,4 +1,5 @@
 const connetion = require("../connection");
+import { Request, Response } from 'express'
 
 const Product = connetion.sequelize.define("product", {
   Title_Product: {
@@ -21,7 +22,7 @@ const Product = connetion.sequelize.define("product", {
   },
 });
 
-export const getItems = async (res: any) => {
+export const getItems = async (res: Response) => {
   try {
     const allProducts = await Product.findAll();
 
@@ -31,7 +32,7 @@ export const getItems = async (res: any) => {
   }
 };
 
-export const getItemRequest = async (res: any, id: number) => {
+export const getItemRequest = async (res: Response, id: number) => {
   try {
     const product = await Product.findOne({ where: { id } });
     if (product === null) {
@@ -44,7 +45,7 @@ export const getItemRequest = async (res: any, id: number) => {
   }
 };
 
-export const getItem = async (res: any, id: number) => {
+export const getItem = async (res: Response, id: number) => {
   try {
     const product = await getItemRequest(res, id);
     if (product === "not found!") {
@@ -57,7 +58,7 @@ export const getItem = async (res: any, id: number) => {
   }
 };
 
-export const getItemsSelected = async (res: any, id: string[]) => {
+export const getItemsSelected = async (res: Response, id: string[]) => {
   try {
     let products = [];
     for (let i in id) {
