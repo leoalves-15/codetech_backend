@@ -4,6 +4,9 @@
   "main": "./src/index.ts",
   "author": "leandroalves <leandro.alves@lighthouseit.com.br>",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node ./src/index.ts\"",
     "build": "tsc",
