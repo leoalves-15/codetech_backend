@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(cors({
-    origin: ['http://192.168.1.3:5173']
+    origin: ['https://codetechfront.herokuapp.com']
 }));
 
 app.use('/api', productRouter);
