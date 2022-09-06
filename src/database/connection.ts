@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
+import {bdDatas} from "../../env";
 
-const sequelize = new Sequelize('m7info11_code_tech', 'm7info11_root', 'dk?TQKg!eE7%', {
-    host: "ns461.hostgator.com.br",
+const sequelize = new Sequelize(bdDatas.bd, bdDatas.user, bdDatas.password, {
+    host: bdDatas.host,
     dialect: 'mysql'
 });
 
